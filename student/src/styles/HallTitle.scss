@@ -1,0 +1,56 @@
+.banner-box {
+    padding: 10px;
+    top: 10px;
+    color: rgb(24, 54, 83);
+    font-size: 50px;
+    letter-spacing: 5px;
+    align-items: center;
+    width: 100%;
+}
+
+.banner {
+    // background-color: beige;
+
+    img {
+        object-fit: contain;
+        max-width: 100%;
+    }
+}
+.sidebar-hidden .banner-box {
+    font-size: 50px; /* Smaller font for phone view */
+    padding: 15px;  /* Adjust padding */
+}
+
+/* Media Query for Tablet and Small Screens */
+@media screen and (max-width: 1024px) {
+    .banner-box {
+        font-size: 50px; /* Adjust font size for tablets */
+        padding: 15px;
+    }
+
+    .banner img {
+        max-width: 90%; /* Reduce the banner width on smaller screens */
+    }
+
+    .sidebar-hidden .banner-box {
+        font-size: 40px; /* Reduce font size on mobile view when sidebar is toggled */
+        padding: 10px;
+    }
+}
+
+/* Media Query for Phone Screens */
+@media screen and (max-width: 767px) {
+    .banner-box {
+        font-size: 40px; /* Smaller font for phones */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .banner img {
+        max-width: 100%; /* Ensure banner fits phone width */
+    }
+
+    .sidebar-hidden .banner-box {
+        font-size: 35px; /* Even smaller font when sidebar is hidden */
+        padding: 5px;
+    }
+}

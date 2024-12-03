@@ -1,0 +1,112 @@
+/* .events-page-content {
+    flex: 1;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+    padding: 10px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.events-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.event-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    color: black;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+}
+
+.event-card p {
+    margin: 5px 0;
+}
+
+.event-card p strong {
+    margin-right: 5px;
+}
+
+@media (max-width: 1200px) {
+    .event-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .event-card {
+        width: 100%;
+    }
+}
+.events-page-content {
+    display: flex;
+    justify-content: center;
+} */
+.events-page-content {
+    display: flex;
+    flex-direction: column; /* Stack dropdown and grid vertically */
+    align-items: center; /* Center align all items */
+    padding: 20px;
+    min-height: 100vh; /* Take full viewport height */
+}
+
+.events-grid {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 20px; /* Space between the cards */
+    justify-content: center; /* Center grid horizontally */
+    margin-top: 20px; /* Gap between dropdown and cards */
+    width: 100%; /* Ensure it spans the full width */
+    max-width: 1200px; /* Optional: limit grid width */
+}
+
+.event-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    color: black;
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Inner padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Automatically fit grid cell */
+    height: 250px; /* Square shape */
+    text-align: center; /* Center text alignment */
+    box-sizing: border-box; /* Include padding in dimensions */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.event-card p {
+    margin: 5px 0; /* Compact spacing between paragraphs */
+    font-size: 14px; /* Smaller text size for square layout */
+}
+
+.event-card p strong {
+    font-weight: bold;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .events-grid {
+        grid-template-columns: 1fr; /* 1 card per row on extra-small screens */
+    }
+}

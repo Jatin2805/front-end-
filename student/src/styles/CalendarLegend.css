@@ -1,0 +1,23 @@
+.legend {
+    display: flex;
+    width: 100%;
+    right: 6.5%;
+    bottom: 15%;
+    z-index: 10;
+    justify-content: space-around;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
